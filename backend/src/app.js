@@ -6,7 +6,7 @@ const compression = require('compression');
 const rateLimit = require('express-rate-limit');
 const config = require('./config');
 const { errorHandler, notFound } = require('./middleware/errorHandler');
-const { requestLogger } = require('./middleware/requestLogger');
+const requestLogger = require('./middleware/requestLogger');
 const technologyRoutes = require('./routes/technologyRoutes');
 const tutorialRoutes = require('./routes/tutorialRoutes');
 

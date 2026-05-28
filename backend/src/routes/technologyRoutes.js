@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { TechnologyController } = require('../controllers/technologyController');
+const TechnologyController = require('../controllers/technologyController');
 
 const router = Router();
 const technologyController = new TechnologyController();

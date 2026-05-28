@@ -1,11 +1,13 @@
-const { tutorialContent } = require('../data/tutorialContent');
+const { tutorialContent } = require('../../data/tutorialContent');
 
 class TutorialService {
   constructor() {
-    if (!TutorialService.instance) {
-      TutorialService.instance = new TutorialService();
+    if (TutorialService.instance) {
+      return TutorialService.instance;
     }
-    return TutorialService.instance;
+
+    TutorialService.instance = this;
+    return this;
   }
 
   async getAllTutorials(query) {
