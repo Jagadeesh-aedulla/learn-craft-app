@@ -1,4 +1,4 @@
-const { TutorialService } = require('../services/tutorialService');
+const TutorialService = require('../services/tutorialService');
 const ApiResponse = require('../utils/response');
 
 class TutorialController {

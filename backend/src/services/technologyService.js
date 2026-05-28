@@ -1,11 +1,13 @@
-const { technologies } = require('../data/technologies');
+const { technologies } = require('../../data/technologies');
 
 class TechnologyService {
   constructor() {
-    if (!TechnologyService.instance) {
-      TechnologyService.instance = new TechnologyService();
+    if (TechnologyService.instance) {
+      return TechnologyService.instance;
     }
-    return TechnologyService.instance;
+
+    TechnologyService.instance = this;
+    return this;
   }
 
   async getAllTechnologies(query) {

@@ -1,4 +1,4 @@
-const { TechnologyService } = require('../services/technologyService');
+const TechnologyService = require('../services/technologyService');
 const ApiResponse = require('../utils/response');
 
 class TechnologyController {
